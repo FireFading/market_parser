@@ -7,7 +7,7 @@ from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import WebDriverWait
 
-from common.settings import max_wait_time, timeout
+from common.settings import max_wait_time, timeout, scroll_sleep
 from common.utils import get_browser
 
 
@@ -68,3 +68,8 @@ class Base:
         self.browser.implicitly_wait(time_to_wait=timeout())
         element.send_keys(Keys.ENTER)
         time.sleep(timeout())
+
+    def page_scroll(self):
+        body = self.browser.find_element_by_tag_name('body')
+        body.send_keys(Keys.PAGE_DOWN)
+        time.sleep(scroll_sleep)

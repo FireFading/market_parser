@@ -7,3 +7,4 @@ def timeout():  # seconds
 
 max_wait_time = 40  # second
 code_expired_time = 1  # minutes
+scroll_sleep = 0.2  # seconds

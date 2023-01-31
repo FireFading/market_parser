@@ -22,3 +22,8 @@ class GoldAppleLocators:
         By.CSS_SELECTOR,
         "textarea.search-field__textarea.digi-autocomplete.jc-ignore",
     )
+
+
+class OzonLocators:
+    SEARCH_INPUT = (By.CSS_SELECTOR, ".a8na.tsBodyL[name=text]")
+    PRODUCT_CARD_ITEM = (By.CSS_SELECTOR, ".ll5.l6l")
