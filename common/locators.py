@@ -12,6 +12,7 @@ class GoldAppleLocators:
     )
     PHONE_INPUT = (By.CSS_SELECTOR, ".input-field__input[name=phone_number]")
     CODE_INPUT = (By.CSS_SELECTOR, ".input-field__input[name=code]")
+    RESEND_CODE_BUTTON = (By.CSS_SELECTOR, ".link.vertical-content__action-link")
     WRONG_CODE_MESSAGE = (By.CSS_SELECTOR, "label._ogg-error")
     SEARCH_BUTTON = (
         By.CSS_SELECTOR,
