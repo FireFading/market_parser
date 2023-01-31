@@ -61,10 +61,10 @@ class Base:
         self.browser.implicitly_wait(time_to_wait=timeout())
         return element
 
-    def input_values(self, locator: tuple, value: str):
+    def send_values(self, locator: tuple, value: str):
         element = self.find_and_click_element(locator=locator)
         element.clear()
         element.send_keys(value)
         self.browser.implicitly_wait(time_to_wait=timeout())
         element.send_keys(Keys.ENTER)
-        time.sleep(secs=timeout())
+        time.sleep(timeout())
