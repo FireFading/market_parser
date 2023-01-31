@@ -11,3 +11,4 @@ class GoldAppleLocators:
         "button.header-tab-button.header-tab-button_customer",
     )
     PHONE_INPUT = (By.CSS_SELECTOR, ".input-field__input[name=phone_number]")
+    CODE_INPUT = (By.CSS_SELECTOR, ".input-field__input[name=code]")
