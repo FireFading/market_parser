@@ -1,0 +1,1 @@
+to start parcing run: `python main.py` in root directory
