@@ -18,6 +18,7 @@ class Ozon(Base):
                 product_card=product_card.text, query=query
             )
             product_list.append(product)
+        print(product_list)
         return product_list
 
     def get_discount(self, item: str) -> int:

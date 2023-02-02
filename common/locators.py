@@ -25,7 +25,7 @@ class GoldAppleLocators:
 
 
 class OzonLocators:
-    SEARCH_INPUT = (By.CSS_SELECTOR, ".a8na.tsBodyL[name=text]")
-    PRODUCT_CARD_ITEM = (By.CSS_SELECTOR, ".ll5.l6l")
+    SEARCH_INPUT = (By.CSS_SELECTOR, "input[name=text]")
+    PRODUCT_CARD_ITEM = (By.CSS_SELECTOR, ".x1j.xj2")
     PRODUCT_PRICE = (By.CSS_SELECTOR, "span._32-a2")
     PRODUCT_PRICE_WITH_OZON_CARD = (By.CSS_SELECTOR, "._33-a ._33-a0")
