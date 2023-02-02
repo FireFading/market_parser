@@ -1,4 +1,4 @@
-from Ozon.main import main
+from GoldApple.main import main
 
 
 if __name__ == "__main__":

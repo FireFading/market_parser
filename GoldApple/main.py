@@ -1,5 +1,5 @@
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from common.base import Base
 from common.env import phone
@@ -16,7 +16,7 @@ class GoldApple(Base):
         self.send_values(locator=GoldAppleLocators.PHONE_INPUT, value=phone)
         code = input("Input confirmation code: ")
         self.send_values(locator=GoldAppleLocators.CODE_INPUT, value=code)
-        code_expired = datetime.now() + datetime.timedelta(minutes=code_expired_time)
+        code_expired = datetime.now() + timedelta(minutes=code_expired_time)
         while (
             self.is_element_present(locator=GoldAppleLocators.WRONG_CODE_MESSAGE)
             or datetime.now() >= code_expired
@@ -24,7 +24,7 @@ class GoldApple(Base):
             self.resend_code()
             code = input("Input confirmation code: ")
             self.send_values(locator=GoldAppleLocators.CODE_INPUT, value=code)
-            code_expired = datetime.now() + datetime.timedelta(
+            code_expired = datetime.now() + timedelta(
                 minutes=code_expired_time
             )
 
